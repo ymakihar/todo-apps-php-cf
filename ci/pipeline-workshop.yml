@@ -9,7 +9,7 @@ jobs:
   - task: php-test-web-app
     config:
       params:
-        TEST_TOKEN: {{TEST-TOKEN}}
+        TEST_TOKEN: {{TEST_TOKEN}}
     file: resource-todo-app/ci/task/run-test.yml
 
 
