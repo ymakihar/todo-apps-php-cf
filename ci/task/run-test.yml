@@ -1,4 +1,4 @@
----
+﻿---
 platform: linux
 
 image_resource:
@@ -10,6 +10,8 @@ image_resource:
 inputs:
   - name: resource-todo-app
     
+params:
+  TEST_TOKEN:
 
 run:
   path: bash
@@ -17,5 +19,6 @@ run:
   - -c 
   - |
     cd resource-todo-*/
+    composer config -g github-oauth.github.com $TEST_TOKEN
     composer install
     atoum -ulr -d test ++verbose

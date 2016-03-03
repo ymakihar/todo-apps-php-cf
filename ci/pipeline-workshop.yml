@@ -7,6 +7,9 @@ jobs:
   - get: resource-todo-app
     trigger: true
   - task: php-test-web-app
+    config:
+      params:
+        TEST_TOKEN: {{TEST-TOKEN}}
     file: resource-todo-app/ci/task/run-test.yml
 
 
@@ -29,7 +32,7 @@ resources:
 - name: resource-todo-app
   type: git
   source:
-    uri: https://github.com/shinji62/todo-apps-php-cf.git
+    uri: https://github.com/ymakihar/todo-apps-php-cf.git
     branch: feature/adding_concourse_pipeline
 
 
