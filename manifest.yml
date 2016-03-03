@@ -1,6 +1,6 @@
 ---
 applications:
-- name: todo-apps-ge
+- name: todo-apps-ymakihar
   memory: 256M
   instances: 1
-  host: todo-apps
+  host: todo-apps-ymakihar
